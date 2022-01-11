@@ -1,7 +1,11 @@
 rm(list=ls()); graphics.off(); cat("\014")
 
 library(reticulate)
-use_python(python="C:/Users/Antonio Candelieri/Documents/.conda/envs/py3.8",required=T)
+if( .Platform$OS.type=="unix") {
+  use_python(python="/home/antonio/anaconda3/envs/py3.8/bin/python",required=T)
+} else {
+  use_python(python="C:/Users/Antonio Candelieri/Documents/.conda/envs/py3.8",required=T)
+}
 conda_python("py3.8")
 
 source("core.R")
@@ -37,9 +41,9 @@ source.1 <- function( x ) {
   
   py_run_string("dataset_name = 'ADULT_full'")
   py_run_string("sensitive_features = ['sex.Female',
-                         'race.African.American', 'race.Asian',
-                         'race.Caucasian', 'race.Hispanic', 'race.Native.American']")
-  py_run_string("target = 'two_year_recid'")
+                         'race.White', 'race.Asian.Pac.Islander',
+                         'race.Amer.Indian.Eskimo', 'race.Other']")
+  py_run_string("target = 'income.leq.50k'")
 
   # setting MLP's hyperparameters
   
@@ -90,11 +94,11 @@ source.2 <- function( x ) {
   beta_2=round(10^beta_2,3)
   tol=round(10^tol,5)
   
-  py_run_string("dataset_name = 'ADULT_redux'")
+  py_run_string("dataset_name = 'ADULT_full'")
   py_run_string("sensitive_features = ['sex.Female',
-                         'race.African.American', 'race.Asian',
-                         'race.Caucasian', 'race.Hispanic', 'race.Native.American']")
-  py_run_string("target = 'two_year_recid'")
+                         'race.White', 'race.Asian.Pac.Islander',
+                         'race.Amer.Indian.Eskimo', 'race.Other']")
+  py_run_string("target = 'income.leq.50k'")
   
   # setting MLP's hyperparameters
   
@@ -173,7 +177,7 @@ for( exp.id in 1:n.independent.runs ) {
   stopifnot( nrow(X[[1]])==nrow(X[[2]]) )
   
   
-  
+  elapsed <- Sys.time()
   # source 1
   cat("> Evaluating initial design for SOURCE #1 (FULL)...\n")
   for( i in 1:nrow(X[[1]]) ) {
@@ -191,8 +195,10 @@ for( exp.id in 1:n.independent.runs ) {
     
   }
   cat("\n")
+  cat("Elapsed:",as.numeric(difftime(Sys.time(),elapsed,units="secs")),"secs\n")
   
   
+  elapsed <- Sys.time()
   # source 2
   cat("> Evaluating initial design for SOURCE #2 (REDUX)...\n")
   for( i in 1:nrow(X[[2]]) ) {
@@ -209,8 +215,8 @@ for( exp.id in 1:n.independent.runs ) {
     # train.times.2[i] <- sum(tmp$train.time)
         
   }
-  
   cat("\n")
+  cat("Elapsed:",as.numeric(difftime(Sys.time(),elapsed,units="secs")),"secs\n")
   
   # cost.1 <- mean(train.times.1)
   # cost.2 <- mean(train.times.2)
