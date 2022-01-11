@@ -1,7 +1,11 @@
 rm(list=ls()); graphics.off(); cat("\014")
 
 library(reticulate)
-use_python(python="C:/Users/Antonio Candelieri/Documents/.conda/envs/py3.8",required=T)
+if( .Platform$OS.type=="unix") {
+  use_python(python="/home/antonio/anaconda3/envs/py3.8/bin/python",required=T)
+} else {
+  use_python(python="C:/Users/Antonio Candelieri/Documents/.conda/envs/py3.8",required=T)
+}
 conda_python("py3.8")
 
 source("core.R")
