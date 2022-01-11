@@ -1,0 +1,109 @@
+FOLD
+
+Train time: 0.00801992416381836
+Miss-classification error: 0.2525597269624573
+DSP [sex.Female] 0.24474158368895238
+DSP [race.African.American] 0.25944216781665563
+DSP [race.Asian] 0.35334476843909735
+DSP [race.Caucasian] 0.13380290484932533
+DSP [race.Hispanic] 0.24128287726999165
+DSP [race.Native.American] 0
+
+FOLD
+
+Train time: 0.007994890213012695
+Miss-classification error: 0.27133105802047786
+DSP [sex.Female] 0.12832618025751075
+DSP [race.African.American] 0.17343895619757696
+DSP [race.Asian] 0.30360205831903936
+DSP [race.Caucasian] 0.09767780901801523
+DSP [race.Hispanic] 0.19575471698113206
+DSP [race.Native.American] 0.7027491408934693
+
+FOLD
+
+Train time: 0.007989883422851562
+Miss-classification error: 0.28498293515358364
+DSP [sex.Female] 0.11871481879703968
+DSP [race.African.American] 0.194632751881454
+DSP [race.Asian] 0.3384879725085912
+DSP [race.Caucasian] 0.1678178963893251
+DSP [race.Hispanic] 0.14414927982366088
+DSP [race.Native.American] 0.6683848797250844
+
+FOLD
+
+Train time: 0.007984638214111328
+Miss-classification error: 0.28839590443686003
+DSP [sex.Female] 0.15034667035219873
+DSP [race.African.American] 0.21008109619686818
+DSP [race.Asian] 0.34700854700854705
+DSP [race.Caucasian] 0.17578361136477647
+DSP [race.Hispanic] 0.1646692321788526
+DSP [race.Native.American] 0
+
+FOLD
+
+Train time: 0.003996133804321289
+Miss-classification error: 0.29692832764505117
+DSP [sex.Female] 0.10368344339877245
+DSP [race.African.American] 0.22658800485029398
+DSP [race.Asian] 0.35213675213671963
+DSP [race.Caucasian] 0.1407352210630901
+DSP [race.Hispanic] 0.2326400536732633
+DSP [race.Native.American] 0.35273972602739717
+
+FOLD
+
+Train time: 0.007998943328857422
+Miss-classification error: 0.27521367521367524
+DSP [sex.Female] 0.08026086956521733
+DSP [race.African.American] 0.2071767649603626
+DSP [race.Asian] 0.3132530120481928
+DSP [race.Caucasian] 0.14224594881114627
+DSP [race.Hispanic] 0.14890699362749052
+DSP [race.Native.American] 0
+
+FOLD
+
+Train time: 0.0039577484130859375
+Miss-classification error: 0.24957264957264957
+DSP [sex.Female] 0.15917327680525198
+DSP [race.African.American] 0.2624731132516599
+DSP [race.Asian] 0.3213058419244094
+DSP [race.Caucasian] 0.1701902748414377
+DSP [race.Hispanic] 0.19296375266524574
+DSP [race.Native.American] 0.6826758147512829
+
+FOLD
+
+Train time: 0.007991790771484375
+Miss-classification error: 0.2564102564102564
+DSP [sex.Female] 0.1406742162891857
+DSP [race.African.American] 0.1915632232274353
+DSP [race.Asian] 0.3477508650519032
+DSP [race.Caucasian] 0.15283853710971673
+DSP [race.Hispanic] 0.10771398111483418
+DSP [race.Native.American] 0
+
+FOLD
+
+Train time: 0.007989168167114258
+Miss-classification error: 0.24957264957264957
+DSP [sex.Female] 0.15427740863787356
+DSP [race.African.American] 0.26369550464512204
+DSP [race.Asian] 0
+DSP [race.Caucasian] 0.19487179487179485
+DSP [race.Hispanic] 0.14821763602251414
+DSP [race.Native.American] 0.6352739726027361
+
+FOLD
+
+Train time: 0.007989645004272461
+Miss-classification error: 0.2564102564102564
+DSP [sex.Female] 0.10010646084237174
+DSP [race.African.American] 0.18639945747491965
+DSP [race.Asian] 0.31903945111493903
+DSP [race.Caucasian] 0.127322204196975
+DSP [race.Hispanic] 0.11679174484052551
+DSP [race.Native.American] 0.3184931506849315
