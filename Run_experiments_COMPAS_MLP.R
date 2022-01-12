@@ -63,7 +63,7 @@ source.1 <- function( x ) {
   py_run_file("kfold_stratified.py")
   
   MCE <- 1-round(mean(unlist(py$res$accuracy)),4)
-  DSP <- matrix(round(unlist(py$res$dsp),4),ncol=6,byrow=T)
+  DSP <- matrix(round(unlist(py$res$dsp),4),ncol=length(py$sensitive_features),byrow=T)
   DSP <- max(apply(DSP,1,mean))
   
   return( c(MCE,DSP) )
@@ -118,7 +118,7 @@ source.2 <- function( x ) {
   py_run_file("kfold_stratified.py")
   
   MCE <- 1-round(mean(unlist(py$res$accuracy)),4)
-  DSP <- matrix(round(unlist(py$res$dsp),4),ncol=6,byrow=T)
+  DSP <- matrix(round(unlist(py$res$dsp),4),ncol=length(py$sensitive_features),byrow=T)
   DSP <- max(apply(DSP,1,mean))
   
   return( c(MCE,DSP) )
