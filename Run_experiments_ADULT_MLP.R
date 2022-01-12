@@ -63,7 +63,7 @@ source.1 <- function( x ) {
   py_run_file("kfold_stratified.py")
   
   MCE <- 1-round(mean(unlist(py$res$accuracy)),4)
-  DSP <- matrix(round(unlist(py$res$dsp),4),ncol=6,byrow=T)
+  DSP <- matrix(round(unlist(py$res$dsp),4),ncol=length(py$sensitive_features),byrow=T)
   DSP <- max(apply(DSP,1,mean))
   
   return( c(MCE,DSP) )
@@ -94,7 +94,7 @@ source.2 <- function( x ) {
   beta_2=round(10^beta_2,3)
   tol=round(10^tol,5)
   
-  py_run_string("dataset_name = 'ADULT_full'")
+  py_run_string("dataset_name = 'ADULT_redux'")
   py_run_string("sensitive_features = ['sex.Female',
                          'race.White', 'race.Asian.Pac.Islander',
                          'race.Amer.Indian.Eskimo', 'race.Other']")
@@ -118,7 +118,7 @@ source.2 <- function( x ) {
   py_run_file("kfold_stratified.py")
   
   MCE <- 1-round(mean(unlist(py$res$accuracy)),4)
-  DSP <- matrix(round(unlist(py$res$dsp),4),ncol=6,byrow=T)
+  DSP <- matrix(round(unlist(py$res$dsp),4),ncol=length(py$sensitive_features),byrow=T)
   DSP <- max(apply(DSP,1,mean))
   
   return( c(MCE,DSP) )
