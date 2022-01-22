@@ -246,6 +246,6 @@ for( exp.id in 1:n.independent.runs ) {
   cat("> Saving results...")
   if( !dir.exists("results") )
     dir.create("results")
-  saveRDS( object=run.info, file=paste0("results/results_COMPAS_MLP_expid_",exp.id,".RDS") )
+  saveRDS( object=run.info, file=paste0("results/results_ADULT_MLP_expid_",exp.id,".RDS") )
   cat(" done!\n")
 }
